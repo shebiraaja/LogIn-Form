@@ -9,9 +9,9 @@ function App() {
   const [signIn, setSignIn] = useState()
   const [signOut, setSignOut] = useState()
 
-  const handleReset = () => {
-    document.querySelectorAll('input').event.target.value = ""
-  };
+  // const handleReset = () => {
+  //   document.querySelectorAll('input').event.target.value = ""
+  // };
 
   return (
 
