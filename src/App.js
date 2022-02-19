@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import SigninPage from './SigninPage';
 
 function App() {
+
+  const [username, setUsername] = useState("shebi")
+  const [signIn, setSignIn] = useState(false)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <div>
+    
+    <input type="text" onChange={event => setUsername(event.target.value)} />
+
+    
+
+    {signIn === true ? <SigninPage /> : ""}
+    
+    <button onClick={() => setSignIn(true)}>sign in</button>
+    <button onClick={() => setSignIn(false)}>sign out</button>
     </div>
+
   );
 }
 
