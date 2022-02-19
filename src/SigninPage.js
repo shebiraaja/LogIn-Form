@@ -5,12 +5,7 @@ const SigninPage = () => {
         <div>
 
             <p>
-                SigninPage
-                SigninPage
-                SigninPage
-                SigninPage
-                SigninPage
-                SigninPage
+                Ya estamos dentro!
 
             </p>
 

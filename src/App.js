@@ -4,8 +4,10 @@ import SigninPage from './SigninPage';
 
 function App() {
 
-  const [username, setUsername] = useState("")
+  const [username, setUsername] = useState()
+  const [password, setPassword] = useState()
   const [signIn, setSignIn] = useState()
+  const [signOut, setSignOut] = useState()
 
   const handleReset = () => {
     document.querySelectorAll('input').event.target.value = ""
@@ -16,15 +18,15 @@ function App() {
     <div>
 
       <input type="text" onChange={event => setUsername(event.target.value)} />
-      <input type="password" onChange={event => setSignIn(event.target.value)} />
+      <input type="password" onChange={event => setPassword(event.target.value)} />
 
-      {username === "hola123" && signIn === "shebi" ? <SigninPage /> : "no tienes acceso" }
+      {username === "shebi" && password === "1234" ? <SigninPage /> : <p>no tienes acceso</p> }
 
       {console.log(username)}
-      {console.log(signIn)}
+      {console.log(password)}
 
-      <button onClick={() => setUsername("")}>sign in</button>
-      <button onClick={() => setSignIn("")}>sign out</button>
+      <button onClick={() => setSignIn("")}>sign in</button>
+      <button onClick={() => setSignOut("")}>sign out</button>
 
 
       {/*signIn === true ? <SigninPage /> : ""*/}
