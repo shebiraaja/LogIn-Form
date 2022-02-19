@@ -16,7 +16,7 @@ function App() {
 
       {username === "hola123" && signIn === "shebi" ? <SigninPage /> : "no tienes acceso"}
 
-      <button onClick={() => setUsername(username="shebi")}>sign in</button>
+      <button onClick={() => setUsername(<SigninPage />)}>sign in</button>
       <button onClick={() => setSignIn(false)}>sign out</button>
 
 
