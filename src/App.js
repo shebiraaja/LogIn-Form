@@ -4,21 +4,23 @@ import SigninPage from './SigninPage';
 
 function App() {
 
-  const [username, setUsername] = useState("shebi")
+  const [username, setUsername] = useState("")
   const [signIn, setSignIn] = useState(false)
 
   return (
 
     <div>
-    
-    <input type="text" onChange={event => setUsername(event.target.value)} />
 
-    
+      <input type="text" onChange={event => setUsername(event.target.value)} />
+      <input type="password" onChange={event => setSignIn(event.target.value)} />
 
-    {signIn === true ? <SigninPage /> : ""}
-    
-    <button onClick={() => setSignIn(true)}>sign in</button>
-    <button onClick={() => setSignIn(false)}>sign out</button>
+      {username === "hola123" && signIn === "shebi" ? <SigninPage /> : "no tienes acceso"}
+
+      <button onClick={() => setUsername(username="shebi")}>sign in</button>
+      <button onClick={() => setSignIn(false)}>sign out</button>
+
+
+      {/*signIn === true ? <SigninPage /> : ""*/}
     </div>
 
   );
