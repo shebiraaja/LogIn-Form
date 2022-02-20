@@ -23,13 +23,17 @@ function App() {
   // }
 
 
-  function hello(username, password) {
+  function entrar(username, password) {
     // alert(`hello ${username} ${password}`)
     if (username === "shebi" && password === "shebi") {
       console.log("has iniciado sesion")
     } else {
       console.log("credenciales incorrectas")
     }
+  }
+
+  function salir() {
+    
   }
 
 
@@ -43,7 +47,7 @@ function App() {
       {/*username === "shebi" && password === "1234" ? <SigninPage /> : <p>no tienes acceso</p>*/}
 
 
-      <button onClick={() => hello(username, password)}>sign in</button>
+      <button onClick={/*() => setSignIn()*/() => entrar(username, password)}>sign in</button>
       <button onClick={() => setSignOut(false)}>sign out</button>
       {console.log(username)}
       {console.log(password)}
