@@ -25,36 +25,50 @@ function App() {
 
   function entrar(username, password) {
     // alert(`hello ${username} ${password}`)
-    if (username === "shebi" && password === "shebi") {
+    if (username === "shebi_32" && password === "1234") {
       console.log("has iniciado sesion")
     } else {
       console.log("credenciales incorrectas")
     }
   }
 
-  function salir() {
-    
-  }
+  // function salir() {
+  //   console.log(document.getElementsByClassName("input").value = "")
 
+
+
+  //   // if (username === "" && password === "") {
+  //   //   console.log("has cerrando sesion")
+  //   // }
+  // }
+
+  function clear(username, password) {
+    if(username === String & password === String) {
+      username(() => "") && password(() => "")
+    } 
+  }
 
   return (
 
     <div>
 
-      <input type="text" onChange={event => setUsername(event.target.value)} />
-      <input type="password" onChange={event => setPassword(event.target.value)} />
+      <input type="text" className="input" onChange={event => setUsername(event.target.value) } value={username} />
+      <input type="password" className="input" onChange={event => setPassword(event.target.value)} value={password} />
 
       {/*username === "shebi" && password === "1234" ? <SigninPage /> : <p>no tienes acceso</p>*/}
 
 
       <button onClick={/*() => setSignIn()*/() => entrar(username, password)}>sign in</button>
-      <button onClick={() => setSignOut(false)}>sign out</button>
+      <button onClick={
+        /*() => setUsername(() => "") && () => setPassword(() => "")*/
+      () => clear(username, password)}>sign out</button>
       {console.log(username)}
       {console.log(password)}
 
 
       {/*signIn === true ? <SigninPage /> : ""*/}
-    </div>
+      {/*signIn === true ? <SigninPage /> : ""*/}
+      </div>
 
   );
 }
