@@ -26,7 +26,8 @@ function App() {
   function entrar(username, password) {
     // alert(`hello ${username} ${password}`)
     if (username === "shebi_32" && password === "1234") {
-      console.log("has iniciado sesion")
+      // console.log("has iniciado sesion")
+      console.log(<SigninPage/>)
     } else {
       console.log("credenciales incorrectas")
     }
