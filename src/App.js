@@ -43,8 +43,14 @@ function App() {
   //   // }
   // }
 
+  // function clear(username, password) {
+  //   if(username === String & password === String) {
+  //     username(() => "") && password(() => "")
+  //   } 
+  // }
+
   function clear(username, password) {
-    if(username === String & password === String) {
+    if(username === "" & password === "") {
       username(() => "") && password(() => "")
     } 
   }
